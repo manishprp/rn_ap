@@ -7,6 +7,7 @@ import {
   StatusBar,
 } from 'react-native';
 import {TabView, SceneMap} from 'react-native-tab-view';
+import colors from '../../config/colors';
 
 const FirstRoute = () => (
   <View style={[styles.container, {backgroundColor: '#ff4081'}]} />
@@ -15,7 +16,7 @@ const SecondRoute = () => (
   <View style={[styles.container, {backgroundColor: '#673ab7'}]} />
 );
 
-export default class TabViewExample extends React.Component {
+export default class CustomTabBar extends React.Component {
   state = {
     index: 0,
     routes: [
@@ -45,9 +46,16 @@ export default class TabViewExample extends React.Component {
 
           return (
             <TouchableOpacity
+              key={i.toString()}
               style={styles.tabItem}
               onPress={() => this.setState({index: i})}>
               <Animated.Text style={{opacity}}>{route.title}</Animated.Text>
+              <View
+                style={{
+                  height: 10,
+                  width: '100%',
+                  backgroundColor: '#fff',
+                }}></View>
             </TouchableOpacity>
           );
         })}
@@ -79,6 +87,7 @@ const styles = StyleSheet.create({
   tabBar: {
     flexDirection: 'row',
     paddingTop: StatusBar.currentHeight,
+    backgroundColor: colors.whatsappGreen,
   },
   tabItem: {
     flex: 1,

@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {FromMetaIcon, WhatsappSplashIcon} from '../asset/svg_images';
+import {FromMetaIcon, WhatsappSplashIcon} from '../../asset/svg_images';
 
 function SplashScreen(props) {
   return (

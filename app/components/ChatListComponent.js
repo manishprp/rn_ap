@@ -36,6 +36,7 @@ function ChatListComponent({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    padding: 10,
   },
   subTitle: {
     color: colors.textColor,
