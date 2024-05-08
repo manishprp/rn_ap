@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import StatusCounter from './app/components/StatusCounter';
+import CustomTabBarWithAnimation from './app/screen/CustomTabBarWithAnimation';
 
 function App(props) {
-  return <StatusCounter count={100} />;
+  return <CustomTabBarWithAnimation />;
 }
 
 const styles = StyleSheet.create({

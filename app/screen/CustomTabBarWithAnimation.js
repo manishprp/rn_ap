@@ -13,11 +13,10 @@ import {SceneMap, TabView} from 'react-native-tab-view';
 
 import MessageListScreen from './MessageListScreen';
 import colors from '../../config/colors';
+import UpdatesListScreen from './UpdatesListScreen';
 
 const ChatScreenRoute = () => <MessageListScreen />;
-const StatusUpdateScreenRoute = () => (
-  <View style={[styles.container, {backgroundColor: '#673ab7'}]} />
-);
+const StatusUpdateScreenRoute = () => <UpdatesListScreen />;
 const CallLogScreenRoute = () => (
   <View style={[styles.container, {backgroundColor: 'red'}]} />
 );
