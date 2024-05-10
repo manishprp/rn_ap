@@ -7,7 +7,6 @@ const FadeInView = props => {
   const finalValX = -initValX;
   const initValY = -(height / 2) + 50;
   const finalValY = -initValY;
-  console.log(finalValX);
   const durationY = 4000;
   const durationX = durationY / 4;
   const fadeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0

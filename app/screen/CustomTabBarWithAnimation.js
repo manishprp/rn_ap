@@ -91,7 +91,6 @@ function CustomTabBarWithAnimation(props) {
             inputRange,
             //[0, eachIndicatorWidth / 11, eachIndicatorWidth / 11],
             outputRange: inputRange.map(inputIndex => {
-              console.log('newInput', newInput);
               if (currentIndex === 0) {
                 return inputIndex === currentIndex ? 0 : eachIndicatorWidth;
               } else if (currentIndex === inputRange[inputRange.length - 1]) {
@@ -162,7 +161,6 @@ function CustomTabBarWithAnimation(props) {
         onPressMain={() => console.log()}
         //actions={actions}
         // onPressItem={name => {
-        //   console.log(`selected button: ${name}`);
         // }}
       />
     </>

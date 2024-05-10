@@ -31,7 +31,6 @@ export default class CustomTabBar extends React.Component {
     const inputRange = props.navigationState.routes.map((x, i) => {
       return i;
     });
-    console.log(inputRange);
 
     return (
       <View style={styles.tabBar}>
@@ -42,7 +41,6 @@ export default class CustomTabBar extends React.Component {
               inputIndex === i ? 1 : 0.5,
             ),
           });
-          console.log(opacity);
 
           return (
             <TouchableOpacity

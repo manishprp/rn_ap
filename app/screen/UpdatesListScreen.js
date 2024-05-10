@@ -1,5 +1,11 @@
-import React from 'react';
-import {View, StyleSheet, VirtualizedList, StatusBar} from 'react-native';
+import React, {useContext, createContext} from 'react';
+import {
+  View,
+  StyleSheet,
+  VirtualizedList,
+  StatusBar,
+  FlatList,
+} from 'react-native';
 import ChatListComponent from '../components/ChatListComponent';
 import {FloatingAction} from 'react-native-floating-action';
 import StatusUpdateRowItem from '../components/StatusUpdateRowItem';
@@ -150,14 +156,13 @@ const userList = [
   },
 ];
 
-const getItem = (_data, index) => userList[index];
-
 const getItemCount = _data => userList.length;
+
 function UpdatesListScreen(props) {
   return (
     <View style={styles.container}>
-      <VirtualizedList
-        initialNumToRender={10}
+      <FlatList
+        data={userList}
         renderItem={({item, index}) => (
           <StatusUpdateRowItem
             image={item.image}
@@ -169,8 +174,6 @@ function UpdatesListScreen(props) {
           />
         )}
         keyExtractor={item => item.id}
-        getItemCount={getItemCount}
-        getItem={getItem}
       />
     </View>
   );

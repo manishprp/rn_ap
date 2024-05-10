@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, VirtualizedList, StatusBar} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  VirtualizedList,
+  StatusBar,
+  FlatList,
+} from 'react-native';
 import ChatListComponent from '../components/ChatListComponent';
 import {FloatingAction} from 'react-native-floating-action';
 
@@ -130,8 +136,8 @@ const getItemCount = _data => userList.length;
 function MessageListScreen(props) {
   return (
     <View style={styles.container}>
-      <VirtualizedList
-        initialNumToRender={10}
+      <FlatList
+        data={userList}
         renderItem={({item, index}) => (
           <ChatListComponent
             image={item.image}
@@ -143,8 +149,6 @@ function MessageListScreen(props) {
           />
         )}
         keyExtractor={item => item.id}
-        getItemCount={getItemCount}
-        getItem={getItem}
       />
     </View>
   );

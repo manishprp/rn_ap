@@ -3,7 +3,6 @@ import {Animated} from 'react-native';
 
 export function CustomIndicator(moveXCopy, isVisible, eachIndicatorWidth) {
   if (!isVisible) {
-    //console.log('returning null', moveXCopy, isVisible, eachIndicatorWidth);
     return null;
   }
   console.log('returning view', moveXCopy, isVisible, eachIndicatorWidth);
